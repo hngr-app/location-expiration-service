@@ -22,6 +22,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	opts.DialTimeout = 30 * time.Second
 
 	rdb := redis.NewClient(opts)
 
